@@ -13,7 +13,7 @@
 		E7788EE61E1368300020E92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7788EE41E1368300020E92D /* Main.storyboard */; };
 		E7788EE81E1368300020E92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7788EE71E1368300020E92D /* Assets.xcassets */; };
 		E7788EEB1E1368300020E92D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7788EE91E1368300020E92D /* LaunchScreen.storyboard */; };
-		E7788EF51E1368AD0020E92D /* ZWSCountdownUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EF41E1368AD0020E92D /* ZWSCountdownUtils.m */; };
+		E7E0FC441E150CDF00A17CEB /* ZWSCountdownUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E0FC431E150CDF00A17CEB /* ZWSCountdownUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		E7788EE71E1368300020E92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7788EEA1E1368300020E92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7788EEC1E1368300020E92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7788EF31E1368AD0020E92D /* ZWSCountdownUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSCountdownUtils.h; sourceTree = "<group>"; };
-		E7788EF41E1368AD0020E92D /* ZWSCountdownUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSCountdownUtils.m; sourceTree = "<group>"; };
+		E7E0FC421E150CDF00A17CEB /* ZWSCountdownUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWSCountdownUtils.h; sourceTree = "<group>"; };
+		E7E0FC431E150CDF00A17CEB /* ZWSCountdownUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWSCountdownUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		E7788EDA1E1368300020E92D /* ZWSCountdown */ = {
 			isa = PBXGroup;
 			children = (
-				E7788EF21E1368730020E92D /* Utils */,
+				E7E0FC411E150CDF00A17CEB /* Classes */,
 				E7788EDE1E1368300020E92D /* AppDelegate.h */,
 				E7788EDF1E1368300020E92D /* AppDelegate.m */,
 				E7788EE11E1368300020E92D /* ViewController.h */,
@@ -83,13 +83,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E7788EF21E1368730020E92D /* Utils */ = {
+		E7E0FC411E150CDF00A17CEB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E7788EF31E1368AD0020E92D /* ZWSCountdownUtils.h */,
-				E7788EF41E1368AD0020E92D /* ZWSCountdownUtils.m */,
+				E7E0FC421E150CDF00A17CEB /* ZWSCountdownUtils.h */,
+				E7E0FC431E150CDF00A17CEB /* ZWSCountdownUtils.m */,
 			);
-			name = Utils;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7788EF51E1368AD0020E92D /* ZWSCountdownUtils.m in Sources */,
+				E7E0FC441E150CDF00A17CEB /* ZWSCountdownUtils.m in Sources */,
 				E7788EE31E1368300020E92D /* ViewController.m in Sources */,
 				E7788EE01E1368300020E92D /* AppDelegate.m in Sources */,
 				E7788EDD1E1368300020E92D /* main.m in Sources */,
@@ -324,6 +324,7 @@
 				E7788EF11E1368300020E92D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
