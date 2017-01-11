@@ -23,7 +23,7 @@ public final class ZWSCountdownUtils: NSObject{
     private let nameBecomeActive = Notification.Name.UIApplicationDidBecomeActive
     
     //MARK: - init
-    public override init() { 
+    public override init() {
         super.init()
         
         NotificationCenter.default.addObserver(self, selector:#selector(didEnterBackground(notification:)), name: nameEnterBackground, object: nil)
@@ -36,15 +36,15 @@ public final class ZWSCountdownUtils: NSObject{
     }
     
     //MARK: - private
-    func didEnterBackground(notification:Notification) -> Void {
+    @objc fileprivate func didEnterBackground(notification:Notification) -> Void {
         saveCountdown(phoneNumber: phoneNumber, business: business, second: currentSecond);
     }
 
-    func didBecomeActive(notification:Notification) -> Void {
+    @objc fileprivate func didBecomeActive(notification:Notification) -> Void {
         getCountDown()
     }
     
-    func updateTimer() -> Void {
+    @objc fileprivate func updateTimer() -> Void {
         if (handle != nil){
             handle!(currentSecond)
             if (currentSecond == 0){
@@ -98,7 +98,7 @@ public final class ZWSCountdownUtils: NSObject{
     }
     
     //MARK: - setter / getter time
-    func saveCountdown(phoneNumber:String,business:String,second:Int32) -> Void {
+    private func saveCountdown(phoneNumber:String,business:String,second:Int32) -> Void {
         let key = phoneNumber + "_" + business
         let countValue:[String:Any] = ["second":NSNumber.init(value: second),"saveDate":Date.init()]
         let defaults = UserDefaults.standard
@@ -106,7 +106,7 @@ public final class ZWSCountdownUtils: NSObject{
         defaults.synchronize()
     }
     
-    func getCountDown() -> Void {
+    private func getCountDown() -> Void {
         let result = getCountDownTime(phoneNumber:phoneNumber as String, business:business as String)
         if result == 0 {
             currentSecond = totalSecond
@@ -115,7 +115,7 @@ public final class ZWSCountdownUtils: NSObject{
         }
     }
     
-    func getCountDownTime(phoneNumber:String,business:String) -> Int32 {
+    private func getCountDownTime(phoneNumber:String,business:String) -> Int32 {
         var result:Double = 0
         let key = phoneNumber + "_" + business
         
