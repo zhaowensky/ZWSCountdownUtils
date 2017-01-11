@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E75B47D51E2615050019932B /* ZWSCountdownUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B47D41E2615050019932B /* ZWSCountdownUtils.swift */; };
+		E77CD7131E1E508E00DA3E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CD7121E1E508E00DA3E1C /* AppDelegate.swift */; };
+		E77CD7151E1E508E00DA3E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CD7141E1E508E00DA3E1C /* ViewController.swift */; };
+		E77CD7181E1E508E00DA3E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77CD7161E1E508E00DA3E1C /* Main.storyboard */; };
+		E77CD71A1E1E508E00DA3E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77CD7191E1E508E00DA3E1C /* Assets.xcassets */; };
+		E77CD71D1E1E508E00DA3E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77CD71B1E1E508E00DA3E1C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E75B47D41E2615050019932B /* ZWSCountdownUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZWSCountdownUtils.swift; path = Classes/ZWSCountdownUtils.swift; sourceTree = SOURCE_ROOT; };
+		E77CD70F1E1E508E00DA3E1C /* ZWSCountdown.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWSCountdown.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E77CD7121E1E508E00DA3E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E77CD7141E1E508E00DA3E1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E77CD7171E1E508E00DA3E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E77CD7191E1E508E00DA3E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E77CD71C1E1E508E00DA3E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E77CD71E1E1E508E00DA3E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E77CD70C1E1E508E00DA3E1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E77CD7061E1E508E00DA3E1C = {
+			isa = PBXGroup;
+			children = (
+				E77CD7111E1E508E00DA3E1C /* ZWSCountdown.Swift */,
+				E77CD7101E1E508E00DA3E1C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E77CD7101E1E508E00DA3E1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E77CD70F1E1E508E00DA3E1C /* ZWSCountdown.Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E77CD7111E1E508E00DA3E1C /* ZWSCountdown.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E77CD7241E1E518800DA3E1C /* Classes */,
+				E77CD7121E1E508E00DA3E1C /* AppDelegate.swift */,
+				E77CD7141E1E508E00DA3E1C /* ViewController.swift */,
+				E77CD7161E1E508E00DA3E1C /* Main.storyboard */,
+				E77CD7191E1E508E00DA3E1C /* Assets.xcassets */,
+				E77CD71B1E1E508E00DA3E1C /* LaunchScreen.storyboard */,
+				E77CD71E1E1E508E00DA3E1C /* Info.plist */,
+			);
+			path = ZWSCountdown.Swift;
+			sourceTree = "<group>";
+		};
+		E77CD7241E1E518800DA3E1C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E75B47D41E2615050019932B /* ZWSCountdownUtils.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E77CD70E1E1E508E00DA3E1C /* ZWSCountdown.Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E77CD7211E1E508E00DA3E1C /* Build configuration list for PBXNativeTarget "ZWSCountdown.Swift" */;
+			buildPhases = (
+				E77CD70B1E1E508E00DA3E1C /* Sources */,
+				E77CD70C1E1E508E00DA3E1C /* Frameworks */,
+				E77CD70D1E1E508E00DA3E1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWSCountdown.Swift;
+			productName = ZWSCountdown.Swift;
+			productReference = E77CD70F1E1E508E00DA3E1C /* ZWSCountdown.Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E77CD7071E1E508E00DA3E1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ZWS;
+				TargetAttributes = {
+					E77CD70E1E1E508E00DA3E1C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EJ4ET65QWL;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E77CD70A1E1E508E00DA3E1C /* Build configuration list for PBXProject "ZWSCountdown.Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E77CD7061E1E508E00DA3E1C;
+			productRefGroup = E77CD7101E1E508E00DA3E1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E77CD70E1E1E508E00DA3E1C /* ZWSCountdown.Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E77CD70D1E1E508E00DA3E1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E77CD71D1E1E508E00DA3E1C /* LaunchScreen.storyboard in Resources */,
+				E77CD71A1E1E508E00DA3E1C /* Assets.xcassets in Resources */,
+				E77CD7181E1E508E00DA3E1C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E77CD70B1E1E508E00DA3E1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E77CD7151E1E508E00DA3E1C /* ViewController.swift in Sources */,
+				E75B47D51E2615050019932B /* ZWSCountdownUtils.swift in Sources */,
+				E77CD7131E1E508E00DA3E1C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E77CD7161E1E508E00DA3E1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E77CD7171E1E508E00DA3E1C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E77CD71B1E1E508E00DA3E1C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E77CD71C1E1E508E00DA3E1C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E77CD71F1E1E508E00DA3E1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E77CD7201E1E508E00DA3E1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E77CD7221E1E508E00DA3E1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ4ET65QWL;
+				INFOPLIST_FILE = ZWSCountdown.Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunkang.ZWSCountdown-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E77CD7231E1E508E00DA3E1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EJ4ET65QWL;
+				INFOPLIST_FILE = ZWSCountdown.Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yunkang.ZWSCountdown-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E77CD70A1E1E508E00DA3E1C /* Build configuration list for PBXProject "ZWSCountdown.Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E77CD71F1E1E508E00DA3E1C /* Debug */,
+				E77CD7201E1E508E00DA3E1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E77CD7211E1E508E00DA3E1C /* Build configuration list for PBXNativeTarget "ZWSCountdown.Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E77CD7221E1E508E00DA3E1C /* Debug */,
+				E77CD7231E1E508E00DA3E1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E77CD7071E1E508E00DA3E1C /* Project object */;
+}
