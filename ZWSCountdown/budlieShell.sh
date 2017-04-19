@@ -1,5 +1,5 @@
 # 工程名
-APP_NAME="ZWSCountdown/ZWSCountdown"
+APP_NAME="ZWSCountdown"
 # 证书
 CODE_SIGN_DISTRIBUTION="iPhone Distribution: Guangzhou Yunkang Information Technology Co., Ltd."
 # info.plist路径
