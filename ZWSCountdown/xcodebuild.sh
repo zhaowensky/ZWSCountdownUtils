@@ -43,7 +43,7 @@ IPAPATH=${BUILDPATH}
 
 
 #导出ipa 所需plist
-ADHOCExportOptionsPlist=./ZWSCountdown/Info.plist
+ADHOCExportOptionsPlist=./ADHOCExportOptions.plist
 AppStoreExportOptionsPlist=./AppStoreExportOptionsPlist.plist
 
 ExportOptionsPlist=${ADHOCExportOptionsPlist}
@@ -60,7 +60,8 @@ echo "		2 AppStore "
 #read parameter
 #sleep 0.5
 #method="$parameter"
-method= "1"
+method=1
+
 
 # 判读用户是否有输入 
 if [ -n "$method" ]
