@@ -19,7 +19,7 @@ APPSTORECODE_SIGN_IDENTITY="xxxxx"
 APPSTOREADHOCPROVISIONING_PROFILE_NAME="xxxx"
 
 #是否是工作空间
-ISWORKSPACE=true
+ISWORKSPACE=false
 ####################################################################
 
 #证书名
