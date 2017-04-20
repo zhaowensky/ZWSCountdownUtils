@@ -53,13 +53,16 @@ ExportOptionsPlist=${ADHOCExportOptionsPlist}
 UPLOADPGYER=false
 
 echo "~~~~~~~~~~~~~~~~选择打包方式~~~~~~~~~~~~~~~~"
+
+
 echo "		1 ad-hoc (默认)"
 echo "		2 AppStore "
 
 # 读取用户输入并存到变量里
-read parameter
-sleep 0.5
-method="$parameter"
+#read parameter
+#sleep 0.5
+#method="$parameter"
+method= "1"
 
 # 判读用户是否有输入 
 if [ -n "$method" ]
@@ -85,8 +88,9 @@ fi
 echo "~~~~~~~~~~~~~~~~是否上传蒲公英~~~~~~~~~~~~~~~~"
 echo "		1 不上传 (默认)"
 echo "		2 上传 "
-read para
-sleep 0.5
+#read para
+#sleep 0.5
+para = "2"
 
 if [ -n "$para" ]
 then
