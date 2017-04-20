@@ -16,9 +16,9 @@ IPANAME="${APP_NAME}_V${bundleShortVersion}_${DATE}.ipa"
 #echo "${IPA_PATH}">> text.txt
 #下面2行是没有Cocopods的用法
 echo "=================clean================="
-xcodebuild -target "${APP_NAME}"  -configuration 'Release' clean
+xcodebuild -target "ZWSCountdown/${APP_NAME}"  -configuration 'Release' clean
 echo "+++++++++++++++++build+++++++++++++++++"
-xcodebuild -target "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
+xcodebuild -target "ZWSCountdown/${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
 #下面2行是集成有Cocopods的用法
 #echo "=================clean================="
 #xcodebuild -workspace "${APP_NAME}.xcworkspace" -scheme "${APP_NAME}"  -configuration 'Release' clean
