@@ -197,6 +197,7 @@ then
 	echo "~~~~~~~~~~~~~~~~上传蒲公英成功~~~~~~~~~~~~~~~~~~~"
 	else
 	echo "~~~~~~~~~~~~~~~~上传蒲公英失败~~~~~~~~~~~~~~~~~~~"
+    exit 1
 	fi
 fi
 
@@ -210,5 +211,5 @@ echo "导出ipa路径: ${IPAPATH}"
 
 echo "$ArchiveTime"
 echo "$ExportTime"
-exit 1
+exit 0
 
