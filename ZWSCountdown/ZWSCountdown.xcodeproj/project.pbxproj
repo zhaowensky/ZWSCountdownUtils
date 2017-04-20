@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E75AE3001EA7434D001E05B3 /* budlieShell.sh in Resources */ = {isa = PBXBuildFile; fileRef = E75AE2FF1EA7434D001E05B3 /* budlieShell.sh */; };
+		E76751BA1EA868BB00DD72F1 /* xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = E76751B91EA868BB00DD72F1 /* xcodebuild.sh */; };
 		E7788EDD1E1368300020E92D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EDC1E1368300020E92D /* main.m */; };
 		E7788EE01E1368300020E92D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EDF1E1368300020E92D /* AppDelegate.m */; };
 		E7788EE31E1368300020E92D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EE21E1368300020E92D /* ViewController.m */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E75AE2FF1EA7434D001E05B3 /* budlieShell.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = budlieShell.sh; sourceTree = "<group>"; };
+		E76751B91EA868BB00DD72F1 /* xcodebuild.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = xcodebuild.sh; sourceTree = "<group>"; };
 		E7788ED81E1368300020E92D /* ZWSCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWSCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7788EDC1E1368300020E92D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7788EDE1E1368300020E92D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		E7788ECF1E1368300020E92D = {
 			isa = PBXGroup;
 			children = (
-				E75AE2FF1EA7434D001E05B3 /* budlieShell.sh */,
+				E76751B91EA868BB00DD72F1 /* xcodebuild.sh */,
 				E7788EDA1E1368300020E92D /* ZWSCountdown */,
 				E7788ED91E1368300020E92D /* Products */,
 			);
@@ -153,7 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75AE3001EA7434D001E05B3 /* budlieShell.sh in Resources */,
+				E76751BA1EA868BB00DD72F1 /* xcodebuild.sh in Resources */,
 				E7788EEB1E1368300020E92D /* LaunchScreen.storyboard in Resources */,
 				E7788EE81E1368300020E92D /* Assets.xcassets in Resources */,
 				E7788EE61E1368300020E92D /* Main.storyboard in Resources */,
