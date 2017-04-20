@@ -16,11 +16,11 @@ IPANAME="${APP_NAME}_V${bundleShortVersion}_${DATE}.ipa"
 #echo "${IPA_PATH}">> text.txt
 #下面2行是没有Cocopods的用法
 echo "=================clean================="
-#xcodebuild -target "${APP_NAME}"  -configuration 'Release' clean
-xcodebuild -project "${APP_NAME}/${APP_NAME}.xcodeproj"  -configuration 'Release' cl
+xcodebuild -target "${APP_NAME}"  -configuration 'Release' clean
+#xcodebuild -project "${APP_NAME}/${APP_NAME}.xcodeproj"  -configuration 'Release' cl
 echo "+++++++++++++++++build+++++++++++++++++"
-#xcodebuild -target "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
-xcodebuild -project "${APP_NAME}/${APP_NAME}.xcodeproj" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
+xcodebuild -target "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
+#xcodebuild -project "${APP_NAME}/${APP_NAME}.xcodeproj" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
 #下面2行是集成有Cocopods的用法
 #echo "=================clean================="
 #xcodebuild -workspace "${APP_NAME}.xcworkspace" -scheme "${APP_NAME}"  -configuration 'Release' clean
