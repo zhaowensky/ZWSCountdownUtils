@@ -33,10 +33,7 @@ xcodebuild -target "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIG
 #xcodebuild -workspace "${APP_NAME}.xcworkspace" -scheme "${APP_NAME}" -sdk iphoneos -configuration 'Release' CODE_SIGN_IDENTITY="${CODE_SIGN_DISTRIBUTION}" SYMROOT='$(PWD)'
 
 #上传脚本
-curl -F ${IPA_PATH}
--F "uKey=8a72c2a7b20f11ca2459ae5f42d2191c"
--F "_api_key=24d5536d2a82bf02c7c2d1adccb3da9d"
-https://qiniu-storage.pgyer.com/apiv1/app/upload
+curl -F ${IPA_PATH} -F "uKey=8a72c2a7b20f11ca2459ae5f42d2191c" -F "_api_key=24d5536d2a82bf02c7c2d1adccb3da9d" https://qiniu-storage.pgyer.com/apiv1/app/upload
 
 
 #调用
