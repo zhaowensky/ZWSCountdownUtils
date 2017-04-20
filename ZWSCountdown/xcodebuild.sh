@@ -53,8 +53,6 @@ ExportOptionsPlist=${ADHOCExportOptionsPlist}
 UPLOADPGYER=true
 
 echo "~~~~~~~~~~~~~~~~选择打包方式~~~~~~~~~~~~~~~~"
-
-
 echo "		1 ad-hoc (默认)"
 echo "		2 AppStore "
 
@@ -128,7 +126,7 @@ CODE_SIGN_IDENTITY="${CODE_SIGN_IDENTITY}" \
 PROVISIONING_PROFILE="${PROVISIONING_PROFILE_NAME}"
 else
 # 清理 避免出现一些莫名的错误
-xcodebuild clean -xcodeproj ${PROJECTNAME}.xcodeproj \
+xcodebuild clean -project ${PROJECTNAME}.xcodeproj \
 -configuration \
 ${CONFIGURATION} -alltargets
 
