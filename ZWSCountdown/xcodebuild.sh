@@ -50,7 +50,7 @@ ExportOptionsPlist=${ADHOCExportOptionsPlist}
 
 
 # 是否上传蒲公英
-UPLOADPGYER=false
+UPLOADPGYER=true
 
 echo "~~~~~~~~~~~~~~~~选择打包方式~~~~~~~~~~~~~~~~"
 
@@ -85,28 +85,28 @@ else
 	ExportOptionsPlist=${ADHOCExportOptionsPlist}
 fi
 
-echo "~~~~~~~~~~~~~~~~是否上传蒲公英~~~~~~~~~~~~~~~~"
-echo "		1 不上传 (默认)"
-echo "		2 上传 "
+#echo "~~~~~~~~~~~~~~~~是否上传蒲公英~~~~~~~~~~~~~~~~"
+#echo "		1 不上传 (默认)"
+#echo "		2 上传 "
 #read para
 #sleep 0.5
-para = "2"
+#para = "2"
 
-if [ -n "$para" ]
-then
-	if [ "$para" = "1" ]
-	then 
-	UPLOADPGYER=false
-	elif [ "$para" = "2" ]
-	then
-	UPLOADPGYER=true
-	else
-	echo "参数无效...."
-	exit 1
-	fi
-else
-	UPLOADPGYER=false
-fi
+#if [ -n "$para" ]
+#then
+#	if [ "$para" = "1" ]
+#	then 
+#	UPLOADPGYER=false
+#	elif [ "$para" = "2" ]
+#	then
+#	UPLOADPGYER=true
+#	else
+#	echo "参数无效...."
+#	exit 1
+#	fi
+#else
+#	UPLOADPGYER=false
+#fi
 
 
 echo "~~~~~~~~~~~~~~~~开始编译~~~~~~~~~~~~~~~~~~~"
@@ -133,7 +133,7 @@ xcodebuild clean -xcodeproj ${PROJECTNAME}.xcodeproj \
 ${CONFIGURATION} -alltargets
 
 #开始构建
-xcodebuild archive -xcodeproj ${PROJECTNAME}.xcodeproj \
+xcodebuild archive -project ${PROJECTNAME}.xcodeproj \
 -scheme ${TARGET_NAME} \
 -archivePath ${ARCHIVEPATH} \
 -configuration ${CONFIGURATION_TARGET} \
