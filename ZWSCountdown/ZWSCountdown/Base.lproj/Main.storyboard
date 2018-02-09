@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SZ-LN-A6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="218"/>
+            <point key="canvasLocation" x="-968" y="218"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -48,6 +48,14 @@
                                 <state key="selected" title="Stop"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bmf-Ey-7Dv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pv0-4M-Tsm">
+                                <rect key="frame" x="168" y="438" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <segue destination="j8H-0g-0fw" kind="push" id="EKD-dU-Ik5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,6 +94,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owu-Pb-TC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-421" y="218"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="B71-rk-DPH">
+            <objects>
+                <viewController id="j8H-0g-0fw" customClass="NextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vwO-T0-QTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zNS-2a-3Ow"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2J-Bj-ADV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="218"/>
         </scene>
     </scenes>
 </document>

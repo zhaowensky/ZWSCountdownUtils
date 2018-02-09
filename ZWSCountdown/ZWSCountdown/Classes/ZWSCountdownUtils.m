@@ -58,10 +58,9 @@
     [self initCountdown];
 }
 
-
 -(void)swiz_viewWillDisappear
 {
-    [self stopCountdown];
+    [self saveBusinessInfo:_currentSecond];
 }
 
 #pragma mark - control
