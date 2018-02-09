@@ -24,6 +24,11 @@
     }
 }
 
+-(void)dealloc
+{
+    NSLog(@"ViewController dealloc");
+    _countdownUtils = nil;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

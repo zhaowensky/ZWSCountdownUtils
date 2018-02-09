@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E76751BA1EA868BB00DD72F1 /* xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = E76751B91EA868BB00DD72F1 /* xcodebuild.sh */; };
-		E76751BC1EA8889000DD72F1 /* autobuild.py in Resources */ = {isa = PBXBuildFile; fileRef = E76751BB1EA8889000DD72F1 /* autobuild.py */; };
-		E76751C01EA89D7F00DD72F1 /* ADHOCExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = E76751BF1EA89D7F00DD72F1 /* ADHOCExportOptions.plist */; };
+		E762C78F202D7C2D003A3F3E /* ZWSHookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E762C78E202D7C2C003A3F3E /* ZWSHookUtils.m */; };
+		E762C795202D7E3C003A3F3E /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E762C794202D7E3C003A3F3E /* NextViewController.m */; };
 		E7788EDD1E1368300020E92D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EDC1E1368300020E92D /* main.m */; };
 		E7788EE01E1368300020E92D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EDF1E1368300020E92D /* AppDelegate.m */; };
 		E7788EE31E1368300020E92D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7788EE21E1368300020E92D /* ViewController.m */; };
@@ -20,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E76751B91EA868BB00DD72F1 /* xcodebuild.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = xcodebuild.sh; sourceTree = "<group>"; };
-		E76751BB1EA8889000DD72F1 /* autobuild.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = autobuild.py; sourceTree = "<group>"; };
-		E76751BF1EA89D7F00DD72F1 /* ADHOCExportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ADHOCExportOptions.plist; sourceTree = "<group>"; };
+		E762C78D202D7C2C003A3F3E /* ZWSHookUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWSHookUtils.h; sourceTree = "<group>"; };
+		E762C78E202D7C2C003A3F3E /* ZWSHookUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWSHookUtils.m; sourceTree = "<group>"; };
+		E762C793202D7E3C003A3F3E /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		E762C794202D7E3C003A3F3E /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		E7788ED81E1368300020E92D /* ZWSCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWSCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7788EDC1E1368300020E92D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7788EDE1E1368300020E92D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,9 +51,6 @@
 		E7788ECF1E1368300020E92D = {
 			isa = PBXGroup;
 			children = (
-				E76751BF1EA89D7F00DD72F1 /* ADHOCExportOptions.plist */,
-				E76751BB1EA8889000DD72F1 /* autobuild.py */,
-				E76751B91EA868BB00DD72F1 /* xcodebuild.sh */,
 				E7788EDA1E1368300020E92D /* ZWSCountdown */,
 				E7788ED91E1368300020E92D /* Products */,
 			);
@@ -76,6 +73,8 @@
 				E7788EE11E1368300020E92D /* ViewController.h */,
 				E7788EE21E1368300020E92D /* ViewController.m */,
 				E7788EE41E1368300020E92D /* Main.storyboard */,
+				E762C793202D7E3C003A3F3E /* NextViewController.h */,
+				E762C794202D7E3C003A3F3E /* NextViewController.m */,
 				E7788EE71E1368300020E92D /* Assets.xcassets */,
 				E7788EE91E1368300020E92D /* LaunchScreen.storyboard */,
 				E7788EEC1E1368300020E92D /* Info.plist */,
@@ -97,6 +96,8 @@
 			children = (
 				E7E0FC421E150CDF00A17CEB /* ZWSCountdownUtils.h */,
 				E7E0FC431E150CDF00A17CEB /* ZWSCountdownUtils.m */,
+				E762C78D202D7C2C003A3F3E /* ZWSHookUtils.h */,
+				E762C78E202D7C2C003A3F3E /* ZWSHookUtils.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -160,9 +161,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76751BC1EA8889000DD72F1 /* autobuild.py in Resources */,
-				E76751C01EA89D7F00DD72F1 /* ADHOCExportOptions.plist in Resources */,
-				E76751BA1EA868BB00DD72F1 /* xcodebuild.sh in Resources */,
 				E7788EEB1E1368300020E92D /* LaunchScreen.storyboard in Resources */,
 				E7788EE81E1368300020E92D /* Assets.xcassets in Resources */,
 				E7788EE61E1368300020E92D /* Main.storyboard in Resources */,
@@ -177,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E0FC441E150CDF00A17CEB /* ZWSCountdownUtils.m in Sources */,
+				E762C795202D7E3C003A3F3E /* NextViewController.m in Sources */,
 				E7788EE31E1368300020E92D /* ViewController.m in Sources */,
 				E7788EE01E1368300020E92D /* AppDelegate.m in Sources */,
+				E762C78F202D7C2D003A3F3E /* ZWSHookUtils.m in Sources */,
 				E7788EDD1E1368300020E92D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
