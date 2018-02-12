@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "ZWSCountdown"
-  s.version      = "0.1"
-  s.summary      = "Countdown,验证码倒计时，退出app也可生效."
+  s.version      = "0.3"
+  s.summary      = "Countdown,验证码倒计时"
 
   s.homepage     = "https://github.com/zhaowensky/ZWSCountdownUtils.git"
   s.license      = { :type => "MIT", :file => "ZWSCountdown/LICENSE" }

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ZWS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 typedef void(^ZWSCountdownUtilsHandle)(int countdownSecond);
@@ -19,7 +19,7 @@ typedef void(^ZWSCountdownUtilsHandle)(int countdownSecond);
  开启倒计时
 
  @param phoneNumber 电话号码
- @param business 业务代号
+ @param business 业务代号 [eg:sendSms]
  @param second 倒计时长
  @param handle 当前剩余时间回调
  */
@@ -40,9 +40,18 @@ typedef void(^ZWSCountdownUtilsHandle)(int countdownSecond);
 
 
 /**
- 视图消失时调用，eg：viewDidDisappear
+ 视图消失时调用[可不调用]，eg：viewDidDisappear
+ (已使用runtime解决)
  */
 -(void)stopCountdown;
 
+/**
+ 清理模块数据【ZWS_】
+ */
++(void)clearData;
+
 
 @end
+
+
+
