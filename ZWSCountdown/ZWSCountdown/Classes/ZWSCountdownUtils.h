@@ -45,6 +45,13 @@ typedef void(^ZWSCountdownUtilsHandle)(int countdownSecond);
  */
 -(void)stopCountdown;
 
+/**
+ 清理模块数据【ZWS_】
+ */
++(void)clearData;
+
+
 @end
+
 
 

@@ -12,7 +12,7 @@
 
 
 @interface ZWSCountdownUtils ()
-@property (nonatomic,strong) NSTimer                 *timer;
+@property (nonatomic,weak  ) NSTimer                 *timer;
 @property (nonatomic,copy  ) NSString                *phoneNumber;
 @property (nonatomic,copy  ) NSString                *business;
 @property (nonatomic,copy  ) ZWSCountdownUtilsHandle handle;
@@ -37,17 +37,21 @@
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(swiz_viewWillDisappear) name:@"zws_swiz_viewWillDisappear" object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(stopCountdown) name:@"zws_cancelReplayTimer" object:nil];
     }
     return self;
 }
 
 -(void)dealloc
 {
-    if(_timer){ _timer = nil; }
+    if(_timer){
+        [_timer invalidate];
+        _timer = nil;
+    }
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
-#pragma mark - application
+#pragma mark - notification
 -(void)didEnterBackground
 {
     [self saveBusinessInfo:_currentSecond];
@@ -69,17 +73,17 @@
                second:(int)second
              callback:(ZWSCountdownUtilsHandle)handle
 {
+    NSAssert(phoneNumber, @"phoneNumber is nil.");
+    NSAssert(business, @"business is nil.");
+    NSAssert(!(second == 0), @"second > 0");
+    
     self.handle = handle;
     self.phoneNumber = phoneNumber;
     self.business = business;
     self.totalSecond = second;
     
-    NSAssert(phoneNumber, @"phoneNumber is nil.");
-    NSAssert(business, @"business is nil.");
-    NSAssert(!(second == 0), @"second > 0");
-    
     [self initCountdown];
-    if(_timer){ [_timer invalidate]; }
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"zws_cancelReplayTimer" object:nil]; //中止多次start造成的timer持有
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countdownTimer) userInfo:nil repeats:YES];
 }
 
@@ -87,6 +91,7 @@
 {
     if(_timer){
         [_timer invalidate];
+        _timer = nil;
     }
     if(_currentSecond == 0){
         [self removeBusinessInfo];
@@ -142,6 +147,7 @@
 }
 
 #pragma mark - NSUserDefaults Data
+//获取当前业务号码的存储数据
 -(NSDictionary*)queryBusinessInfo
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -150,6 +156,7 @@
     return countValue;
 }
 
+//保存当前业务的最后剩余时间
 -(void)saveBusinessInfo:(int)second
 {
     NSDictionary *countValue = @{@"second":[NSNumber numberWithInt:second],@"saveDate":[NSDate date]};
@@ -159,6 +166,7 @@
     [defaults synchronize];
 }
 
+//删除当前业务的存储数据
 -(void)removeBusinessInfo
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -172,12 +180,26 @@
     return [NSString stringWithFormat:@"ZWS_%@_%@",_phoneNumber,_business];
 }
 
+//清理所有业务存储数据
++(void)clearData
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [defaults dictionaryRepresentation];
+    for (id key in dic.allKeys) {
+        if([key isKindOfClass:[NSString class]]){
+            if([key hasPrefix:@"ZWS_"]){
+                [defaults removeObjectForKey:key];
+            }
+        }
+    }
+    [defaults synchronize];
+}
 
 @end
 
+
 #pragma mark - hook post notification
 @interface UIViewController(lifeCycleSwizHook)
-
 @end
 
 @implementation UIViewController(lifeCycleSwizHook)
@@ -200,30 +222,6 @@
 
 @end
 
-
-//@interface UIViewController(tempHook)
-//
-//@end
-//
-//@implementation UIViewController(tempHook)
-//
-//+ (void)initialize
-//{
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        SEL originalSelector2 = @selector(viewWillDisappear:);
-//        SEL swizzledSelector2 = @selector(zws2_swiz_viewWillDisappear:);
-//        [ZWSHookUtils swizzlingInClass:[self class] originalSelector:originalSelector2 swizzledSelector:swizzledSelector2];
-//    });
-//}
-//
-//-(void)zws2_swiz_viewWillDisappear:(BOOL)animated
-//{
-//    [[NSNotificationCenter defaultCenter]postNotificationName:@"swiz_viewWillDisappear" object:nil];
-//    [self zws2_swiz_viewWillDisappear:animated];
-//}
-//
-//@end
 
 
 

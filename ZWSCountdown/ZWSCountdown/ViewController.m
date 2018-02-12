@@ -11,7 +11,6 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labTime;
-@property (strong,nonatomic) ZWSCountdownUtils *countdownUtils;
 - (IBAction)buttonAction:(id)sender;
 @end
 
@@ -19,15 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(_countdownUtils){
-        [_countdownUtils stopCountdown];
+    //检查当前业务号码倒记时是否结束
+    ZWSCountdownUtils *countdownUtils = [ZWSCountdownUtils getCountdownUtils];
+    if([countdownUtils checkCountdown:@"991" business:@"119"]){
+        [self buttonAction:nil];
     }
+    
+    [ZWSCountdownUtils clearData];
 }
 
 -(void)dealloc
 {
     NSLog(@"ViewController dealloc");
-    _countdownUtils = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,19 +44,20 @@
 
 - (IBAction)buttonAction:(id)sender
 {
-    UIButton *button = sender;
-    if(!button.selected){
-        if(_countdownUtils){
-            [_countdownUtils stopCountdown];
-        }
-        _countdownUtils = [ZWSCountdownUtils getCountdownUtils];
-        __weak typeof(self) weakSelf = self;
-        [_countdownUtils startCountdown:@"991" business:@"119" second:30 callback:^(int countdownSecond) {
-            weakSelf.labTime.text = [NSString stringWithFormat:@"%lds",(long)countdownSecond];
-        }];
-    }
+    ZWSCountdownUtils *countdownUtils = [ZWSCountdownUtils getCountdownUtils];
+    __weak typeof(ViewController*) weakSelf = self;
+    [countdownUtils startCountdown:@"991" business:@"119" second:60 callback:^(int countdownSecond) {
+        weakSelf.labTime.text = [NSString stringWithFormat:@"%lds",(long)countdownSecond];
+        NSLog(@">>>%@",weakSelf.labTime.text);
+    }];
 }
 
+
 @end
+
+
+
+
+
 
 
