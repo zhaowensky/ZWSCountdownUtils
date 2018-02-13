@@ -123,6 +123,10 @@ Timer控件在启动后，会添加到NSRunLoop中，因此如果不主动invali
 #### 三、总结
 功能实现没有什么难点，主要是程序逻辑实现问题：NSTimer中消息进程问题与runtimer的简单使用完善相关配置。[zhaowensky](https://www.jianshu.com/u/81616e5b7664)
 
+、、、
+pod 'ZWSCountdown', '~> 0.3'
+、、、
+
 
 
 
